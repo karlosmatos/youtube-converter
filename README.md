@@ -1,5 +1,8 @@
 # Ad-free YouTube Video Converter and MP3 Downloader
 
+https://github.com/karlosmatos/youtube_converter/assets/105454484/f61f6185-5a69-489b-88b7-35a4b90175e7
+
+
 ## Overview
 
 This application provides a user-friendly interface for converting YouTube videos to MP3 format without ads. It is built using the Streamlit framework and utilizes the pytube module for handling YouTube video interactions. The entire codebase is organized in the `app.py` file.

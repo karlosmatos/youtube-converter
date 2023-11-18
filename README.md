@@ -12,30 +12,27 @@ This application provides a user-friendly interface for converting YouTube video
 
 ## Usage
 
+### Cloud
+
+The application is publicly available on Hugging Face Spaces. You can access it [here](https://huggingface.co/spaces/karelmaly/youtubeconverter).
+
+### Locally
+
 1. Clone the repository:
 
-   ```bash
+   ```
    git clone https://github.com/your-username/ad-free-youtube-converter.git
-Navigate to the project directory:
-
-bash
-Copy code
-cd ad-free-youtube-converter
-Install the required dependencies:
-
-bash
-Copy code
-pip install -r requirements.txt
-Run the application:
-
-bash
-Copy code
-streamlit run app.py
-GitHub Actions and Deployment
+2. Navigate to the project directory:
+   ```
+   cd youtube_converter
+3. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+4. Run the application:
+   ```
+   python -m streamlit run app.py
+## GitHub Actions and Deployment
 The project is configured with GitHub Actions to synchronize with the Hugging Face space repository and automatically deploy from the main branch.
 
-Contributing
-If you would like to contribute to the project, please follow the guidelines in CONTRIBUTING.md.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENCE) file for details.

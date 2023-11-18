@@ -22,7 +22,7 @@ def download_audio_from_youtube(url):
         return renamed_file
     
     except VideoUnavailable:
-        st.error('The video is not available. This could be due to region restrictions. Please try another video.')
+        st.error('The video is not available. This could be due to region restrictions or invalid URL. Please check URL or try another video.')
         return None
 
 def get_audio_stream(video, progress_bar):

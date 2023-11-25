@@ -1,8 +1,12 @@
 import os
+import logging
 import streamlit as st
 from pytube import YouTube
 from pytube.exceptions import VideoUnavailable
 
+# Configure logging
+logging.basicConfig(filename='user_activity.log', level=logging.INFO, 
+                    format='%(asctime)s:%(levelname)s:%(message)s')
 
 def download_audio_from_youtube(url):
     """Download audio from YouTube video and return the file path."""
@@ -68,8 +72,8 @@ def get_user_input():
 def process_user_input(youtube_url, submit_button):
     """Process user input and download audio from YouTube."""
     if submit_button:
-        downloaded_file = download_audio_from_youtube(youtube_url)
-        if downloaded_file:
+        logging.info(f'User submitted URL: {youtube_url}')  # Log user activity
+        if downloaded_file := download_audio_from_youtube(youtube_url):
             create_download_button_for_file(downloaded_file)
 
 def main():

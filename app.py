@@ -1,5 +1,6 @@
 import os
 import logging
+import requests
 import streamlit as st
 from pytube import YouTube
 from pytube.exceptions import VideoUnavailable
@@ -72,7 +73,9 @@ def get_user_input():
 def process_user_input(youtube_url, submit_button):
     """Process user input and download audio from YouTube."""
     if submit_button:
-        logging.info(f'User submitted URL: {youtube_url}')  # Log user activity
+        # Get the user's IP address
+        user_ip = requests.get('https://api.ipify.org').text
+        logging.info(f'User with IP {user_ip} submitted URL: {youtube_url}')  # Log user activity
         if downloaded_file := download_audio_from_youtube(youtube_url):
             create_download_button_for_file(downloaded_file)
 
